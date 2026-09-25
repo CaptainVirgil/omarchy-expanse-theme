@@ -3,7 +3,7 @@
 | File | Source | Credit / licence |
 |---|---|---|
 | 1-saturn-day-earth-smiled.jpg | NASA Photojournal PIA17172, "The Day the Earth Smiled" | NASA/JPL-Caltech/SSI, public domain |
-| 2-ceres-ahuna-mons.jpg | NASA Photojournal PIA20349, "Ahuna Mons Perspective View" | NASA/JPL-Caltech/UCLA/MPS/DLR/IDA/PSI, public domain |
+| 2-ceres-occator.jpg | NASA Photojournal PIA21913, "Occator Perspective View" (Ceres) | NASA/JPL-Caltech/UCLA/MPS/DLR/IDA, public domain |
 | 3-saturn-portrait.jpg | NASA Photojournal PIA06193, "The Greatest Saturn Portrait ...Yet" | NASA/JPL/Space Science Institute, public domain |
 | 4-mars.jpg | NASA Photojournal PIA00407, "Global Color Views of Mars" | NASA/JPL/USGS, public domain |
 | 5-carina-webb.jpg | ESA/Webb weic2205a, "Cosmic Cliffs" in the Carina Nebula | NASA, ESA, CSA, STScI; CC BY 4.0 |
