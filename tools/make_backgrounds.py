@@ -23,13 +23,14 @@ TEAL = np.array([79, 182, 198]) / 255
 FG = np.array([207, 214, 223]) / 255
 
 
-def noise(w, h, rng, octaves=(64, 32, 16, 8), weights=(0.5, 0.25, 0.15, 0.10)):
-    """Smooth value noise: blurred random grids summed over a few scales."""
+def noise(w, h, rng, octaves=(640, 320, 160, 80), weights=(0.55, 0.25, 0.13, 0.07)):
+    """Smooth value noise: blurred random grids summed over a few large scales."""
     acc = np.zeros((h, w))
     for cell, wt in zip(octaves, weights):
-        gw, gh = w // cell + 2, h // cell + 2
+        gw, gh = w // cell + 3, h // cell + 3
         g = rng.random((gh, gw))
         im = Image.fromarray((g * 255).astype(np.uint8)).resize((w, h), Image.BICUBIC)
+        im = im.filter(ImageFilter.GaussianBlur(cell / 6))
         acc += wt * np.asarray(im, dtype=float) / 255
     return acc / sum(weights)
 
@@ -47,16 +48,16 @@ def stars(w, h, rng, n, bright, size_px):
 def sky(w, h, rng):
     base = np.ones((h, w, 3)) * BG
     neb = noise(w, h, rng)
-    neb = np.clip((neb - 0.42) * 2.2, 0, 1) ** 1.6
+    neb = np.clip((neb - 0.40) * 2.4, 0, 1) ** 1.4
     # orange at the lower left, blue toward the upper right
     gx = np.linspace(0, 1, w)[None, :]; gy = np.linspace(1, 0, h)[:, None]
     mix = np.clip(0.5 * gx + 0.5 * gy, 0, 1)
     tint = ORANGE * (1 - mix)[..., None] + BLUE * mix[..., None]
-    base += neb[..., None] * tint * 0.22
-    base += (stars(w, h, rng, w * h // 900, 0.9, 0.6))[..., None] * FG * 0.9   # far, tiny
-    base += (stars(w, h, rng, w * h // 9000, 1.0, 1.4))[..., None] * FG          # near, soft
-    big = stars(w, h, rng, w * h // 120000, 1.0, 3.0)
-    base += big[..., None] * (FG * 0.6 + TEAL * 0.4)
+    base += neb[..., None] * tint * 0.28
+    base += (stars(w, h, rng, w * h // 700, 1.0, 0.7))[..., None] * FG * 1.2   # far, tiny
+    base += (stars(w, h, rng, w * h // 6000, 1.0, 1.3))[..., None] * FG * 1.4  # near, soft
+    big = stars(w, h, rng, w * h // 90000, 1.0, 2.6)
+    base += big[..., None] * (FG * 0.6 + TEAL * 0.4) * 1.5
     return base
 
 
