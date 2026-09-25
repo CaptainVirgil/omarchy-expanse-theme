@@ -17,7 +17,7 @@ Later: `omarchy theme set expanse`, `omarchy theme bg next`, `omarchy theme upda
 | File | Purpose |
 |---|---|
 | `colors.toml` | the palette; Omarchy renders every app config from it |
-| `backgrounds/` | three procedurally generated 4K wallpapers: deep space, a drive plume crossing it, a ring gate |
+| `backgrounds/` | nine 4K wallpapers: six public-domain / CC BY space photographs (Saturn, Ceres, Mars, Jupiter, the Carina Nebula) and three generated ones (ring gate, drive plume, deep space); see `backgrounds/CREDITS.md` |
 | `unlock.png`, `preview-unlock.png` | lock-screen glyph (a ring gate) and its preview |
 | `icons.theme` | `Yaru-wartybrown` |
 | `keyboard.rgb` | MCRN orange for RGB keyboards |
@@ -38,7 +38,8 @@ Active window border: orange to blue, 45°.
 
 ## Tools
 
-Everything visual here is generated, nothing is downloaded art.
+The generated assets come from these scripts; the photographs are NASA and
+ESA/Webb releases, credited in `backgrounds/CREDITS.md`.
 
 - `tools/make_backgrounds.py` renders the three wallpapers from seeded noise
   and star fields. `--size WxH` for other resolutions.
