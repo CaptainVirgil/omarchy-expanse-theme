@@ -1,0 +1,7 @@
+# 3D models used by tools/ are third-party; get them yourself, see tools/models/SOURCES.txt
+tools/models/*.glb
+tools/models/*.stl
+tools/models/*.fbx
+tools/venv/
+tools/out/
+__pycache__/

@@ -1,0 +1,7 @@
+Models are not redistributed here (no licence metadata in the files).
+Put your own copies in this directory to run the tools:
+
+  mcrn_tachi_expanse_tv_show.glb   "MCRN Tachi (Expanse TV show)", Sketchfab, GLB export with 1k textures
+  xxx_-_roci_whole.stl             "Rocinante" 3D-print model (binary STL, includes a display stand)
+
+tools/render_ship.py reads either; the GLB gives textures, the STL only geometry.

@@ -1,0 +1,35 @@
+# Omarchy theme: Expanse
+# Deep space, MCRN orange, Epstein-drive blue, hazard red, Belter teal.
+mode = "dark"
+
+accent = "#e8752a"
+selection = "#1c2735"
+muted = "#2b3542"
+
+background = "#0a0e14"
+dark_background = "#070a0f"
+darker_background = "#04060a"
+lighter_background = "#141b25"
+
+foreground = "#cfd6df"
+dark_foreground = "#6b7585"
+light_foreground = "#b8c2cf"
+bright_foreground = "#e9eef4"
+
+hyprland_active_border = "rgba(e8752aee) rgba(4f8fe0ee) 45deg"
+
+red = "#d63a3f"
+yellow = "#f0b64a"
+orange = "#e8752a"
+green = "#7fb86b"
+cyan = "#4fb6c6"
+blue = "#4f8fe0"
+magenta = "#b57ad9"
+brown = "#7a4e3a"
+
+bright_red = "#ff5c5c"
+bright_yellow = "#ffcf6e"
+bright_green = "#9be08a"
+bright_cyan = "#62d8ea"
+bright_blue = "#6faaff"
+bright_magenta = "#cf9bef"
